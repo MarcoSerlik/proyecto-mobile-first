@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+header {
+  background-color: blueviolet;
+  color: white;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Banner  */
+
+.banner {
+  padding: 20px;
+}
+
+.banner-texto {
+  height: 30vh;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row;
+  }
+
+  header nav {
+    width: 40%;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 50%;
+  }
+
+  .banner-texto {
+    text-align: start;
+  }
+
+  .banner-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* -------------------------------------------------  MAIN  --------------------------------------------------- */
+
+/* .proyectos {
+  
+} */
+
+/* ------------  Section proyectos ---------- */
+.proyectos h2 {
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px;
+}
+
+.contenedor-proyectos {
+  padding: 20px;
+
+  display: flex;
+  overflow-x: scroll;
+}
+
+.card-proyecto {
+  border: 2px solid black;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0px 10px;
+
+  min-width: 250px;
+}
+
+.card-proyecto img {
+  width: 100%;
+}
+
+.card-proyecto a {
+  padding: 5px 10px;
+  margin: 20px;
+  border: solid 2px black;
+  background-color: darkmagenta;
+  color: white;
+}
+
+/* --------- Section tecnologias ------------ */
+
+.tecnologias h2 {
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px;
+}
+
+.tecnologias p {
+  padding: 20px;
+}
+
+/* ----------- Section Redes Sociales ---------- */
+
+.redes-sociales h2 {
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px;
+}
+
+.contenedor-redes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.redes-icono {
+  font-size: 3rem;
+  color: darkred;
+}
+
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row;
+  }
+
+  header nav {
+    width: 40%;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 50%;
+  }
+
+  .banner-texto {
+    text-align: start;
+  }
+
+  .banner-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .contenedor-proyectos {
+    overflow-x: hidden;
+    justify-content: space-around;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 20vw;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas:
+      "banner banner banner "
+      "proyectos proyectos aside"
+      "tecnologias tecnologias aside";
+  }
+
+  .banner {
+    grid-area: banner;
+  }
+
+  .proyectos {
+    grid-area: proyectos;
+  }
+
+  .tecnologias {
+    grid-area: tecnologias;
+  }
+
+  .redes-sociales {
+    border: 3px solid black;
+    grid-area: aside;
+  }
+
+  .contenedor-redes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
